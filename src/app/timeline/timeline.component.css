@@ -1,0 +1,29 @@
+.timeline{
+    width:50vw;
+    padding:0px 2.5vw;
+    position: absolute;
+    top: 10vh;
+    left:20vw;
+    height:90vh;
+    overflow-y: scroll;
+}
+
+.timeline::-webkit-scrollbar-track 
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+.timeline::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: transparent;
+}
+
+.timeline::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #F5F5F5;
+}

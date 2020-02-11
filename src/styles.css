@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: rgb(8, 6, 15);
+}
+
+p, h1, h2, h3{
+    color:white;
+    font-family: 'Mukta', sans-serif;
+}
+
+.button{
+    cursor:pointer;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}

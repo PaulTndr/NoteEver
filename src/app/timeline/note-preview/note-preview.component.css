@@ -1,0 +1,37 @@
+.note{
+    width:46vw;
+    height:15vh;
+    background-color:whitesmoke;
+    border-radius:0.43em;
+    padding:1vh 2vw;
+    margin-bottom: 1vh;
+    position: relative;
+}
+
+p{
+    font-size: 1.3em;
+    color:rgb(21, 29, 26);
+}
+
+.rondImg{
+    position: absolute;
+    top:10px;
+    right:0.5vw;
+    border: 3px solid rgb(56, 52, 109);
+    border-radius: 100px;
+    width:3vw;
+    height:3vw;
+}
+
+.logoCategorie{
+    width:2vw;
+    height:2vw;
+    display: block;
+    margin: auto;
+    margin-top: 0.5vw;
+}
+
+.date{
+    font-style: italic;
+    font-size: 1em;
+}
