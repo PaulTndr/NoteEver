@@ -1,0 +1,35 @@
+<div class="flexRow choiceCategory">
+    <div class="oneCategory">
+        <img src="https://image.flaticon.com/icons/svg/692/692041.svg"/>
+    </div>
+    <div class="oneCategory categorySelected">
+        <img src="https://image.flaticon.com/icons/svg/2497/2497631.svg"/>
+    </div>
+    <div class="oneCategory">
+        <img src="https://image.flaticon.com/icons/svg/897/897066.svg"/>
+    </div>
+    <div class="oneCategory">
+        <img src="https://image.flaticon.com/icons/svg/1150/1150152.svg"/>
+    </div>
+    <div class="oneCategory">
+        <img src="https://image.flaticon.com/icons/svg/2497/2497424.svg"/>
+    </div>
+    <div class="oneCategory">
+        <img src="https://image.flaticon.com/icons/svg/1839/1839283.svg"/>
+    </div>
+</div>
+
+<div class="newNoteBox">
+    <textarea [(ngModel)]="newNote.text" (keydown)="checkSizeTxt()"></textarea>
+    <p class="date">{{currentDate | date : 'longDate'}}</p>
+    <p class="caracLimit">{{nbrCarac}}/{{limitCarac}}</p>
+</div>
+
+<div class="flexRow buttonsCancelAndAdd">
+    <div class="button divImg" routerLink="/timeline">
+        <img src="https://image.flaticon.com/icons/svg/64/64498.svg"/>
+    </div>
+    <div class="button divImg">
+        <img src="https://image.flaticon.com/icons/svg/717/717912.svg"/>
+    </div>
+</div>

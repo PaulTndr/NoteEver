@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    background: url(https://www.pixelstalk.net/wp-content/uploads/images1/Ink-in-water-photos.jpg) no-repeat;
+	background-attachment: fixed; 
+	background-size: cover;
+}
+
+
+.logoTxt{
+    position: absolute;
+    top:1vh;
+    left:1vh;
+    align-items: center;
+    h1,p{
+        margin:0px;
+        z-index: 2;
+    }
+    h1{
+        font-family: 'Lobster', cursive;
+        font-size: 3em;
+        font-weight: 100;
+    }
+    p{
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5em;
+    }
+    img{
+        position: absolute;
+        z-index: 1;
+        width: 15vw;
+        left: -4vw;
+        top: -8vw;
+    }
+}
+
+p, h1, h2, h3{
+    color:white;
+    font-family: 'Mukta', sans-serif;
+}
+
+.button{
+    cursor:pointer;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}

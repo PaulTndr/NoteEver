@@ -1,5 +1,11 @@
+<div class="button rondImg writeIcon" routerLink="/add-note">
+    <img src="https://image.flaticon.com/icons/svg/16/16294.svg"/>
+</div>
+
 <div class="timeline">
     <div *ngFor="let note of listNotes">
+        <app-note-preview [note]="note"></app-note-preview>
+        <app-note-preview [note]="note"></app-note-preview>
         <app-note-preview [note]="note"></app-note-preview>
     </div>
 </div>
