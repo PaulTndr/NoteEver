@@ -25,14 +25,9 @@ app.use(function (req, res, next) {
 });
 
 // custom routes
-var OffreController = require('./controllers/OffreController');
-var UserController = require('./controllers/UserController');
-var CompanyController = require('./controllers/CompanyController');
-
+var NoteController = require('./controllers/NoteController');
 // Set our routes
-app.use('/offres', OffreController);
-app.use('/users', UserController);
-app.use('/companies', CompanyController);
+app.use('/notes', NoteController);
 
 // Handle 404
 app.use(function (req, res) {
@@ -54,7 +49,7 @@ app.use(function (error, req, res, next) {
 });
 
 //listen
-const uri = "mongodb+srv://admin0xp:mdpadmin0xp@0xp-aqxy3.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://NoteEverAdmin:NoteEverAdmin@noteever-xxpjy.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {
     useNewUrlParser: true
 });

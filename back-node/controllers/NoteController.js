@@ -6,19 +6,15 @@ var ObjectId = require('mongodb').ObjectID
 router.use(bodyParser.json());
 var mongoose = require('mongoose');
 
-var notificationModule = require('../modules/notificationModule.js')
-var matchingModule = require('../modules/matchingModule.js')
-
 const escapeStringRegexp = require('escape-string-regexp')
 
 router.get('/', function (req, res) {
-    console.log("Request /offres/")
-    db.collection('offers').find().toArray(function(err, results) {
-        expandWithMatching(results);
+    console.log("Request /notes/")
+    db.collection('notes').find().toArray(function(err, results) {
         res.json(results);
     })
 });
-
+/*
 router.get('/filtered', function (req, res) {
     console.log("Request /offres/filtered")
     query={}
@@ -151,11 +147,5 @@ router.delete('/deleteById/:id', function (req, res) {
     res.send(req.body);
 });
 
-
+*/
 module.exports = router;
-
-function expandWithMatching(results) {
-    results.forEach((offre)=>{
-        offre.matchingScore = matchingModule.matchingWithUser(offre)
-    })
-};
