@@ -99,3 +99,8 @@ textarea {
         }
     }
 }
+
+.disabled{
+    pointer-events: none;
+    filter: invert(0.9);
+}

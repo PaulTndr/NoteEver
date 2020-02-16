@@ -9,8 +9,9 @@ var mongoose = require('mongoose');
 const escapeStringRegexp = require('escape-string-regexp')
 
 router.get('/', function (req, res) {
-    console.log("Request /notes/")
-    db.collection('notes').find().toArray(function(err, results) {
+    console.log("Request /Notes/")
+    db.collection('Notes').find().toArray(function(err, results) {
+        console.log("found "+results.length+" results")
         res.json(results);
     })
 });
@@ -114,17 +115,16 @@ router.get('/byCompanyId', function (req, res) {
     db.collection('offers').find({"id_company": id}).toArray(function(err, results) {
         res.json(results);
     })
-});
+});*/
 
 
 router.post('/post', function (req, res) {
-    console.log("Request /offres/post");
-    db.collection('offers').insertOne(req.body);
-    //On check si quelqu'un attendait une offre de ce type
-    notificationModule.checkNotifForAllUsers(req.body)
+    console.log("Request /notes/post");
+    db.collection('Notes').insertOne(req.body);
     res.send(req.body);
 });
 
+/*
 router.post('/update', function (req, res) {
     console.log("Request /offres/update");
     console.log(req.body);

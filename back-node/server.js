@@ -1,12 +1,3 @@
-/*var app = require('./app');
-var port = process.env.PORT || 3000;
-
-var server = app.listen(port, function() {
-    console.log('Express server listening on port ' + port);
-    const all_routes = require('express-list-endpoints');
-    console.log(all_routes(app));
-});*/
-
 var express = require('express');
 var app = express();
 var http = require('http');
@@ -55,9 +46,7 @@ const client = new MongoClient(uri, {
 });
 client.connect(err => {
     if (err) return console.log(err)
-    db = client.db('0xpDB')
+    db = client.db('NoteEver')
     var httpServer = http.createServer(app);
     httpServer.listen(PORT, () => console.log(`API running on localhost:${PORT}`));
 })
-/*var httpServer = http.createServer(app);
-httpServer.listen(PORT, () => console.log(`API running on localhost:${PORT}`));*/

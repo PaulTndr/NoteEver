@@ -1,4 +1,4 @@
-import { NoteService } from './note.service';
+import { NoteManagmentService } from '../NoteManagment.service';
 import { Component, OnInit } from '@angular/core';
 import { Note } from 'src/models/Note';
 import { Subscription } from 'rxjs';
@@ -13,16 +13,17 @@ export class TimelineComponent implements OnInit {
   listNotes:Note[]=[];
   listNotesSubscription: Subscription;
 
-  constructor(private noteService : NoteService) { }
+  constructor(private noteManagmentService : NoteManagmentService) { }
 
   ngOnInit() {
-    this.noteService.getNotes();
-    this.listNotesSubscription = this.noteService.listNotesSubject.subscribe(
+    this.noteManagmentService.getNotes();
+    this.listNotesSubscription = this.noteManagmentService.listNotesSubject.subscribe(
       (listNotes: Note[]) => {
         this.listNotes = listNotes.slice();
+        this.listNotes.reverse()
       }
     );
-    this.noteService.emitListNotesSubject();
+    this.noteManagmentService.emitListNotesSubject();
   }
 
 }

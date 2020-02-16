@@ -1,6 +1,11 @@
 <div class="note">
     <div class="rondImg">
-        <img class="logoCategorie" src="https://image.flaticon.com/icons/svg/504/504448.svg"/>
+        <img *ngIf="note.category=='nature'" class="logoCategorie" src="https://image.flaticon.com/icons/svg/692/692041.svg"/>
+        <img *ngIf="note.category=='science'" class="logoCategorie" src="https://image.flaticon.com/icons/svg/2497/2497631.svg"/>
+        <img *ngIf="note.category=='technologie'" class="logoCategorie" src="https://image.flaticon.com/icons/svg/897/897066.svg"/>
+        <img *ngIf="note.category=='general'" class="logoCategorie" src="https://image.flaticon.com/icons/svg/1150/1150152.svg"/>
+        <img *ngIf="note.category=='coding'" class="logoCategorie" src="https://image.flaticon.com/icons/svg/2497/2497424.svg"/>
+        <img *ngIf="note.category=='life'" class="logoCategorie" src="https://image.flaticon.com/icons/svg/1839/1839283.svg"/>
     </div>
     <p>{{note.text}}</p>
     <p class="date">{{note.date | date : 'longDate'}}</p>
