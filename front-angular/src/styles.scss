@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 body{
     background: url(https://www.pixelstalk.net/wp-content/uploads/images1/Ink-in-water-photos.jpg) no-repeat;
@@ -12,6 +13,7 @@ body{
     top:1vh;
     left:1vh;
     align-items: center;
+    color:white;
     h1,p{
         margin:0px;
         z-index: 2;
@@ -35,7 +37,6 @@ body{
 }
 
 p, h1, h2, h3{
-    color:white;
     font-family: 'Mukta', sans-serif;
 }
 

@@ -2,6 +2,31 @@
     <img src="https://image.flaticon.com/icons/svg/16/16294.svg"/>
 </div>
 
+<div class="flexRow filterTimeline">
+    <div class="flexRow categoriesSelect">
+        <div class="button rondImgSelectCat" [ngClass]="{'selectedCategorie':mapCategoriesOnFilter['nature']}"(click)="modifyCategories('nature')">
+            <img class="logoCategorie" src="https://image.flaticon.com/icons/svg/692/692041.svg"/>
+        </div>
+        <div class="button rondImgSelectCat" [ngClass]="{'selectedCategorie':mapCategoriesOnFilter['science']}" (click)="modifyCategories('science')">
+            <img class="logoCategorie" src="https://image.flaticon.com/icons/svg/2497/2497631.svg"/>
+        </div>
+        <div class="button rondImgSelectCat" [ngClass]="{'selectedCategorie':mapCategoriesOnFilter['technologie']}" (click)="modifyCategories('technologie')">
+            <img class="logoCategorie" src="https://image.flaticon.com/icons/svg/897/897066.svg"/>
+        </div>
+        <div class="button rondImgSelectCat" [ngClass]="{'selectedCategorie':mapCategoriesOnFilter['general']}" (click)="modifyCategories('general')">
+            <img class="logoCategorie" src="https://image.flaticon.com/icons/svg/1150/1150152.svg"/>
+        </div>
+        <div class="button rondImgSelectCat" [ngClass]="{'selectedCategorie':mapCategoriesOnFilter['coding']}" (click)="modifyCategories('coding')">
+            <img class="logoCategorie" src="https://image.flaticon.com/icons/svg/2497/2497424.svg"/>
+        </div>
+        <div class="button rondImgSelectCat" [ngClass]="{'selectedCategorie':mapCategoriesOnFilter['life']}" (click)="modifyCategories('life')">
+            <img class="logoCategorie" src="https://image.flaticon.com/icons/svg/1839/1839283.svg"/>
+        </div>
+    </div>
+
+    <img class="button shuffleIcon" src="https://image.flaticon.com/icons/svg/724/724979.svg" (click)="shuffle()"/>
+</div>
+
 <div class="timeline">
     <div *ngFor="let note of listNotes">
         <app-note-preview [note]="note"></app-note-preview>

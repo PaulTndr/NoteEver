@@ -15,6 +15,16 @@ router.get('/', function (req, res) {
         res.json(results);
     })
 });
+
+
+router.get('/categoryFiltered', function (req, res) {
+    console.log("Request /Notes/categoryFiltered")
+    categories=req.query["categories"].split(";")
+    db.collection('Notes').find({'category': { $in: categories }}).toArray(function(err, results) {
+        console.log("found "+results.length+" results")
+        res.json(results);
+    })
+});
 /*
 router.get('/filtered', function (req, res) {
     console.log("Request /offres/filtered")
